@@ -16,7 +16,7 @@ return (0);
 if (tree->left != NULL || tree->right != NULL)
 return (1 + binary_tree_nodes(tree->left) + binary_tree_nodes(tree->right));
 
-/* 
+/*
 * If the current node has no children, it does not count as a node with
 * children
 */
