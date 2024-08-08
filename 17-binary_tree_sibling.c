@@ -9,21 +9,23 @@
 */
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
-/* Check if the node or its parent is NULL */
-if (node == NULL || node->parent == NULL)
-return (NULL);
+    binary_tree_t *parent;
 
-/* Get the parent node */
-binary_tree_t *parent = node->parent;
+    /* Check if the node or its parent is NULL */
+    if (node == NULL || node->parent == NULL)
+        return (NULL);
 
-/* If node is the left child, return the right child of the parent */
-if (parent->left == node)
-return (parent->right);
+    /* Get the parent node */
+    parent = node->parent;
 
-/* If node is the right child, return the left child of the parent */
-if (parent->right == node)
-return (parent->left);
+    /* If node is the left child, return the right child of the parent */
+    if (parent->left == node)
+        return (parent->right);
 
-/* Node has no sibling */
-return (NULL);
+    /* If node is the right child, return the left child of the parent */
+    if (parent->right == node)
+        return (parent->left);
+
+    /* Node has no sibling */
+    return (NULL);
 }
