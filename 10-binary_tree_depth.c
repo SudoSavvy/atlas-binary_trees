@@ -14,7 +14,8 @@ if (tree == NULL)
 return (0);
 
 /*Traverse up the tree from the node to the root, counting the
-* number of edges*/
+* number of edges
+*/
 while (tree->parent != NULL)
 {
 depth++;
