@@ -19,7 +19,10 @@ left_height = binary_tree_height(tree->left);
 /* Recursively measure the height of the right subtree */
 right_height = binary_tree_height(tree->right);
 
-/* The height of the current tree is the maximum of the heights of the subtrees plus 1 for the current node */
+/*
+* The height of the current tree is the maximum of the heights of the
+* subtrees plus 1 for the current node
+*/
 return (1 + (left_height > right_height ? left_height : right_height));
 }
 
